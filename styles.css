@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Raleway';
+  background-image: url("images/bg-mobile.svg");
+  background-size: cover;
+}
+
+main {
+  align-items: center;
+  margin:25% auto;
+  width: 80%;
+  color: hsl(243, 100%, 93%);
+}
+
+.firstCard, .secondCard{
+  background-color: hsl(228, 56%, 26%);
+  padding: 40px;
+}
+
+.firstCard {
+  border-radius:10px 100px 10px 10px;
+  margin: 15px 0;
+}
+
+
+.firstCard .logo {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.firstCard .icons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.firstCard .icons .icon {
+  display: flex;
+  background-color: hsl(229, 57%, 11%);
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.secondCard {
+  border-radius:10px;
+  text-align: center;
+}
+
+.secondCard .gbTitle {
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+.progress{
+    height: 20px;
+    overflow: visible;
+    background: hsl(229, 57%, 11%);
+    border-radius: 20px;
+    border: solid 2px hsl(229, 57%, 11%);
+}
+.progress .progress-bar{
+    position: relative;
+    width: 80%;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+}
+.progress .progress-icon{
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    position: absolute;
+    right: 2px;
+    background: #fff;
+    top: 2px;
+}
+
+.min_slide, .max_slide {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+.min_slide {
+  float: left;
+}
+
+.max_slide {
+  float: right;
+}
+
+.gbLeft {
+  width: 50%;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 10px 25px;
+  align-items: center;
+  position:absolute;
+  left: 0;
+  right: 0;
+}
+
+.gbValue {
+  color: hsl(229, 57%, 11%);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.gbLabel {
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  padding: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+    background-color: hsl(229, 57%, 11%);
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  .firstCard{
+    margin: 0 30px;
+  }
+
+  .contain {
+    align-items: flex-end;
+  }
+
+  .gbLeft {
+    float: right;
+    top: -50%;
+    left: auto;
+    right: 40px;
+  }
+
+  .secondCard {
+    text-align: left;
+    height: 150px;
+  }
+
+  .gbLeft::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-top: 40px solid white;
+  }
+
+}
